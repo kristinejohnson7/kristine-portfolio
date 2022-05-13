@@ -1,6 +1,10 @@
 const navButton = document.querySelector("button[aria-expanded");
 const nav = document.getElementById("topNav");
 
+var span = document.querySelectorAll(".scroll-arrows");
+var div = document.querySelectorAll(".projects-scroll");
+var l = 0;
+
 //Hero Flower Animation
 
 const tl = gsap.timeline({
@@ -22,19 +26,6 @@ gsap.fromTo(
 
 //Parallax
 
-// const parallaxElements = [...document.getElementsByClassName("parallax")];
-
-// const parallax = function (img) {
-//   const speed = 3;
-//   let pos = "-" + window.pageYOffset / speed + "px";
-//   img.style.backgroundPosition = `center ${pos}`;
-// };
-
-// window.addEventListener("scroll", function (e) {
-//   parallaxElements.forEach((img) => {
-//     parallax(img);
-//   });
-// });
 var image = document.getElementsByClassName("para");
 new simpleParallax(image, {
   delay: 0.7,
@@ -80,9 +71,6 @@ navButton.addEventListener("click", toggleNav);
 
 //Carousel
 
-var span = document.querySelectorAll(".scroll-arrows");
-var div = document.querySelectorAll(".projects-scroll");
-var l = 0;
 span[1].onclick = () => {
   l++;
   for (var i of div) {

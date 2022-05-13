@@ -229,7 +229,7 @@
 /* Project Scroll Bar */
 
 .projects {
-  background-color: #F7F7F7;
+  background-color: rgba(233, 232, 229);
   overflow: hidden;
   position: relative;
 }
@@ -247,6 +247,7 @@
 }
 
 .projects-wrapper {
+  border-top: 4px solid rgba(233, 232, 229);
   width: 100%;
   position: absolute;
   top: 0;
@@ -256,21 +257,20 @@
 }
 
 .project-top {
-  display: flex;
   position: relative;
-  justify-content: center;
+  padding: 15px;
   text-align: center;
-  flex-direction: column;
-  align-items: center;
   top: -300px;
   z-index:1;
-  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.project-header {
-  text-align: center;
-  margin-bottom: 37px;
-  z-index: 100;
+.projects-header p {
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .projects-filter {
@@ -296,10 +296,10 @@
 
 .scroll-arrows {
   position: absolute;
-  top: 40%;
+  top: 60%;
   font-size: 60px;
   font-weight: bold;
-  color: var(--highlight-green);
+  color: #738C77;
   cursor: pointer;
   left: 7%;
   right: 27%;
@@ -320,6 +320,7 @@
   justify-content: left;
   overflow-x: auto;
   margin-top: 500px;
+  margin-bottom: 90px;
 }
 
 .project-scroller::-webkit-scrollbar{
@@ -359,6 +360,7 @@
 
 .project-description {
   margin-top: 15px;
+  font-size: var(--size-20);
   color: var(--highlight-green);
 }
 
