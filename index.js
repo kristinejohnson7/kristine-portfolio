@@ -1,3 +1,6 @@
+const navButton = document.querySelector("button[aria-expanded");
+const nav = document.getElementById("topNav");
+
 //Hero Flower Animation
 
 const tl = gsap.timeline({
@@ -16,6 +19,64 @@ gsap.fromTo(
     ease: "sine.inOut",
   }
 );
+
+//Parallax
+
+// const parallaxElements = [...document.getElementsByClassName("parallax")];
+
+// const parallax = function (img) {
+//   const speed = 3;
+//   let pos = "-" + window.pageYOffset / speed + "px";
+//   img.style.backgroundPosition = `center ${pos}`;
+// };
+
+// window.addEventListener("scroll", function (e) {
+//   parallaxElements.forEach((img) => {
+//     parallax(img);
+//   });
+// });
+var image = document.getElementsByClassName("para");
+new simpleParallax(image, {
+  delay: 0.7,
+  transition: "cubic-bezier(0,0,0,1)",
+});
+
+// Full Page Scroll Animations
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+//Nav Events
+
+window.onscroll = function () {
+  if (window.pageYOffset > 100) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+};
+
+function toggleNav({ target }) {
+  const expanded = target.getAttribute("aria-expanded") === "true" || false;
+  navButton.setAttribute("aria-expanded", !expanded);
+}
+
+navButton.addEventListener("click", toggleNav);
 
 //Carousel
 
