@@ -94,12 +94,12 @@
             </p>
           </div>
           <ul class="projects-filter">
-            <li>All</li>
-            <li>HTML/CSS</li>
-            <li>Node</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Freelance</li>
+            <li data-filter="all" class="filter-link active btn">All</li>
+            <li data-filter="html/css" class="filter-link btn">HTML/CSS</li>
+            <li data-filter="node" class="filter-link btn">Node</li>
+            <li data-filter="javascript" class="filter-link btn">JavaScript</li>
+            <li data-filter="react" class="filter-link btn">React</li>
+            <li data-filter="freelance" class="filter-link btn">Freelance</li>
           </ul>
           </div>
    
@@ -107,59 +107,247 @@
         <span class="scroll-arrows">&#139;</span>
         <span class="scroll-arrows">&#155;</span>
         <div class="project-scroller">
-          <div class="project-card projects-scroll" data-item="html/css">
+          <div class="project-card projects-scroll" data-item="all html/css" data-open="css-1">
             <div class="project-title">Yellow Aesthetic Grid Collage</div>
             <div class="project-pic">
               <img src="./assets/Projects/ts-css-grid.png" alt="" />
             </div>
             <p class="project-description">HTML/CSS</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
-          <div class="project-card projects-scroll" data-item="node">
+          <div class="project-card projects-scroll" data-item="all node" data-open="node-1">
             <div class="project-title">Node Battleship</div>
             <div class="project-pic">
               <img src="./assets/Projects/battleship.png" alt="" />
             </div>
             <p class="project-description">Node</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
-          <div class="project-card projects-scroll" data-item="javascript">
+          <div class="project-card projects-scroll" data-item="all javascript" data-open="js-1">
             <div class="project-title">Spotify API Radio App</div>
             <div class="project-pic">
               <img src="./assets/Projects/kristine-radio.png" alt="" />
             </div>
             <p class="project-description">JavaScript & OAuth API</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
-          <div class="project-card projects-scroll" data-item="html/css">
+          <div class="project-card projects-scroll" data-item="all html/css" data-open="css-2">
             <div class="project-title">SAAS Website</div>
             <div class="project-pic">
               <img src="./assets/Projects/SAAS.png" alt="" />
             </div>
             <p class="project-description">HTML/CSS</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
-          <div class="project-card projects-scroll" data-item="node">
+          <div class="project-card projects-scroll" data-item="all node" data-open="node-2">
             <div class="project-title">Node Calculator</div>
             <div class="project-pic">
               <img src="./assets/Projects/node-calc.png" alt="" />
             </div>
             <p class="project-description">Node</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
-          <div class="project-card projects-scroll" data-item="freelance">
+          <div class="project-card projects-scroll" data-item="all freelance" data-open="freelance-1">
             <div class="project-title">Next Level Movement PT</div>
             <div class="project-pic">
               <img src="./assets/Projects/nlm.png" alt="" />
             </div>
             <p class="project-description">HTML/CSS & JavaScript</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
-          <div class="project-card projects-scroll" data-item="freelance">
+          <div class="project-card projects-scroll" data-item="all freelance" data-open="freelance-2">
             <div class="project-title">Haley Klein Therapy</div>
             <div class="project-pic">
               <img src="./assets/Projects/hktherapy.png" alt="" />
             </div>
             <p class="project-description">HTML/CSS & JavaScript</p>
+            <div class="card-popup-box">
+              <div class="pop-up">
+                <h4>Check out more details of this project</h4>
+                <button class="project-popup-btn btn">LEARN MORE</button>
+              </div>
+            </div>
           </div>
         </div>
       
     </section>
- 
+    <div id="css-1" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+
+        <header class="modal-header">
+          <h3>Yellow Asthetic Grid Collage</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/ts-css-grid.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div id="node-1" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+
+        <header class="modal-header">
+          <h3>Node Battleship</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/battleship.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="js-1" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+        <header class="modal-header">
+          <h3>Spotify API Radio App</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/kristine-radio.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="css-2" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+        <header class="modal-header">
+          <h3>SAAS Website</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/SAAS.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="node-2" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+        <header class="modal-header">
+          <h3>Node Calculator</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/node-calc.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="freelance-1" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+        <header class="modal-header">
+          <h3>Next Level Movement Physical Therapy</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/nlm.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="freelance-2" class="modal" data-animation="slideInOutTop">
+      <div class="modal-dialog">
+        <i class="fas fa-times" data-close></i>
+        <header class="modal-header">
+          <h3>Haley Klein Therapy</h3>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="./assets/Projects/hktherapy.png" alt="project img">
+          </div>
+          <div class="text-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi quod tempore eius culpa adipisci accusamus quis? Illo excepturi possimus cupiditate ab sed architecto, incidunt iste, aliquid iure hic labore.</p>
+            <div class="project-ref-btns">
+              <a class="btn" href="#">Project</a>
+              <a class="btn" href="#">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"

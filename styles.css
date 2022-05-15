@@ -62,7 +62,7 @@
 /* Hero Header */
 
 .hero-wrapper {
-  border-bottom: 7px solid var(--highlight-light-pink);
+  border-bottom: 5px solid var(--highlight-light-pink);
 }
 
 .hero-text {
@@ -284,8 +284,6 @@
 
 .projects-filter li {
   background-color: var(--highlight-green);
-  padding: 10px;
-  border-radius: 4px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -303,7 +301,7 @@
   cursor: pointer;
   left: 7%;
   right: 27%;
-  z-index: 100;
+  z-index: 80;
   background-color: transparent;
 }
 
@@ -337,7 +335,7 @@
   padding-top: 60px;
   font-weight: bold;
   margin: 10px 20px;
-  color: var(--highlight-dark-pink);
+  color: var(--highlight-green);
   background: rgba(255, 255, 255, 0.7);
   border-radius: 7px;
   transition: 0.5s;
@@ -364,12 +362,194 @@
   color: var(--highlight-green);
 }
 
- /* About Me */
+.filter-link.active {
+  background-color: var(--highlight-yellow );
+}
 
- .about-me {
-   margin-top: var(--size-150);
-   display: flex;
-   align-items: center;
-   gap: var(--size-50);
- }
+.card-popup-box {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  transition: 0.4s;
+  z-index: 1;
+  padding: 1.25rem 1.875rem;
+  opacity: 0;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--highlight-dark-pink);
+}
 
+.card-popup-box:before {
+  position: absolute;
+  content: "";
+  background: rgba(233, 232, 229);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.project-card:hover .card-popup-box {
+  bottom: 20px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card-popup-box div {
+  color: var(--color-text-opacity);
+  font-size: 0.8125rem;
+  line-height: 1.63;
+  letter-spacing: 1.63px;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.card-popup-box h4 {
+  pointer-events: none;
+  color: var(--color-headings);
+  font-size: 1.3125rem;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.project-popup-btn {
+  background: var(--highlight-light-pink);
+  color: white;
+}
+
+.project-popup-btn:hover {
+  background-color: var(--highlight-yellow);
+}
+
+/* Modal */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  transition: all 0.35s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1999;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  max-height: 80vh;
+  background-color: var(--light-background);
+  color: var(--font-color-base);
+  overflow: scroll;
+  padding: 1.25rem 1.85rem;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-body .img-wrapper {
+  max-width: 550px;
+  margin-right: 0.75rem;
+}
+
+.modal-body .img-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 20px; 
+}
+
+.modal-header {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.modal-dialog .modal-header h3 {
+  color: var(--color-text-base);
+  font-size: var(--size-30);
+}
+
+.modal-dialog .fa-times {
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in;
+  display: flex;
+  justify-content: end;
+}
+
+.modal-dialog .text-wrapper {
+  margin: auto;
+  width: 70%;
+}
+
+.modal-dialog .text-wrapper p {
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.project-ref-btns {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.text-wrapper .project-ref-btns a {
+  background-color: var(--highlight-dark-pink);
+  margin-bottom: 30px;
+}
+
+.modal-dialog .text-wrapper a:hover {
+  background-color: var(--highlight-yellow);
+}
+
+.modal-dialog .fa-times:hover {
+  transition: scale(1.2);
+  cursor: pointer;
+}
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+[data-animation="slideInOutTop"] .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+
+[data-animation="slideInOutTop"].is-visible .modal-dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutTop"] .modal-dialog {
+  transform: translateY(-100%);
+}
+
+[data-animation="slideInOutTop"].is-visible .modal-dialog {
+  transform: none;
+}
