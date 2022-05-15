@@ -553,3 +553,132 @@
 [data-animation="slideInOutTop"].is-visible .modal-dialog {
   transform: none;
 }
+
+/* Contact Me */ 
+
+.contact-me {
+  background-color: var(--highlight-light-pink);
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+form {
+  min-height: 47vh;
+  width: 100%;
+  color: #777474;
+  background-color: var(--white);
+  border-radius: 2rem;
+  min-width: 750px;
+  padding: 3rem 5rem;
+  display: flex;
+  position: relative;
+  background-color: var(--white);
+}
+
+.contact-title {
+  font-size: var(--size-30);
+  color: var(--highlight-green)
+}
+
+.contact-left .description {
+  margin-top: 7px;
+  font-size: var(--size-16)
+}
+
+.contact-right,
+.contact-left {
+  flex: 1;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border: none;
+  outline: none;
+  color: #777474;
+  font-size: 0.7rem;
+}
+
+textarea {
+  border: 2px solid #E8E8E8;
+}
+
+.input-container {
+  position: relative;
+}
+
+.placeholder {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  padding: 0.3rem 0rem;
+  font-size: var(--size-16);
+  opacity: 0.6;
+  transform-origin: left;
+}
+
+.line-svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  opacity: 0.8;
+}
+
+.contact-sbt-btn {
+  background-color: var(--highlight-green);
+}
+
+.tick-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 2;
+}
+
+#character {
+  position: absolute;
+  transform: scale(0.7) translate(-53%, 27%);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+}
+
+.submitted {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #777474;
+  font-size: 1rem;
+  pointer-events: none;
+  text-align: center;
+  transform: translate(-45%, -50%);
+  opacity: 0;
+}
+
+@media screen and (max-width: 812px) {
+  form {
+    width: 90vw;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 8rem 3rem;
+  }
+  .line-svg {
+    width: 100%;
+  }
+  #character {
+    transform: scale(0.4) translate(0%, 30%);
+  }
+}
