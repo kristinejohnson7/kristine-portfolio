@@ -18,6 +18,7 @@
   margin-top: var(--size-30);
   position: fixed;
   right: var(--size-100);
+  align-items: center;
 }
 
 .nav-bar li {
@@ -73,7 +74,8 @@
 }
 
 .hero-text span, 
-.projects-title {
+.projects-,
+.testimonials-title {
   font-size: var(--size-40);
   font-style: italic;
   color: var(--highlight-dark-pink);
@@ -327,12 +329,12 @@
 
 .project-card {
   min-width: 500px;
-  min-height: 450px;
+  min-height: 470px;
   height: 200px;
   position: relative;
   left: 0;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 35px;
   font-weight: bold;
   margin: 10px 20px;
   color: var(--highlight-green);
@@ -342,7 +344,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.project-title {
+.project-title, .testimonials-title {
   font-size: var(--size-30);
 }
 
@@ -357,7 +359,7 @@
 }
 
 .project-description {
-  margin-top: 15px;
+  margin-top: 37px;
   font-size: var(--size-20);
   color: var(--highlight-green);
 }
@@ -554,6 +556,135 @@
   transform: none;
 }
 
+
+/* Testimonials */
+
+#testimonialsSection {
+  background-color: var(--highlight-green);
+}
+
+.testimonials-wrapper {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  z-index: 10;
+}
+
+.testimonials-wrapper .testimonials-title {
+  color: var(--white);
+}
+
+.slide-ctrl-container {
+  margin-top: 50px;
+}
+
+.slide-ctrl-container button {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--font-color-base);
+  font-size: 32px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.slide-ctrl-container button:hover {
+  opacity: 1;
+}
+
+.slide-ctrl-container button:nth-child(1) { padding-right: 10px; }
+.slide-ctrl-container button:nth-child(2) { padding-left: 10px; }
+
+.review-carousel .review-item {
+  background: var(--white);
+  color: var(--font-color-base);
+  max-width: 450px;
+  padding: 2.5rem;
+  border-radius: 24px;
+  width: 100%;
+  box-shadow: 0 22px 34px rgba(22, 28, 45, 0.18);
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.review-carousel {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  margin: 100px 0px 50px;
+  pointer-events: none;
+}
+
+.review-item .review-text {
+  padding-bottom: 2.5rem;
+  text-align: left;
+}
+
+.review-author {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  position: relative;
+  margin-left: 15px;
+  gap: 10px;
+}
+
+.review-author .avatar {
+  width: 46px; 
+  height: 46px;
+  margin-right: 12px;
+}
+
+.review-author .avatar .five-star-icon {
+  width: 70px;
+  position: absolute;
+  top: -229px;
+  left: -20px;
+  margin-right: 15px;
+}
+
+.review-author .avatar .heart-icon {
+  width: 50px;
+  position: absolute;
+  margin-right: 15px;
+  left: 0px;
+  top: -129px;
+}
+
+.details .name {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.details .company {
+  color: #6b6b6b;
+}
+
+.review-item.active {
+  transform: translate(0, -10%);
+  z-index: 10;
+  opacity: 1;
+}
+
+.review-item.prev {
+  transform: translateX(-75%);
+}
+
+.review-item.next {
+  transform: translateX(75%);
+}
+
+.review-item.prev, 
+.review-item.next {
+  opacity: 0.25;
+}
+
+
 /* Contact Me */ 
 
 .contact-me {
@@ -612,6 +743,7 @@ form {
 
 textarea {
   border: 2px solid #E8E8E8;
+  margin-top: 7px;
 }
 
 .input-container {
@@ -668,17 +800,51 @@ textarea {
   opacity: 0;
 }
 
-@media screen and (max-width: 812px) {
-  form {
-    width: 90vw;
-    min-height: 80vh;
-    flex-direction: column;
-    padding: 8rem 3rem;
-  }
-  .line-svg {
-    width: 100%;
-  }
-  #character {
-    transform: scale(0.4) translate(0%, 30%);
-  }
+/* Footer */ 
+
+.footer-wrapper {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-wrapper .logo-container {
+  width: 270px;
+  margin-left: 30px;
+}
+
+.footer-wrapper .logo-container img {
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  padding: 20px;
+  gap: 50px;
+  font-size: var(--size-16);
+}
+
+.footer-navigation li, .footer-socials li {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.footer-navigation li a:hover, .footer-socials li a:hover {
+  color: var(--highlight-yellow);
+}
+
+.footer-socials .icon {
+  background-color: var(--highlight-light-pink);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 7px;
 }

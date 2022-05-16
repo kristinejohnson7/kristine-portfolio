@@ -357,3 +357,17 @@ submitButton.addEventListener("click", (e) => {
     { rotation: -10, y: 2, ease: "elastic(3,0.3)", duration: 2, delay: 1 }
   );
 });
+
+gsap.to("#star", 1, {
+  scale: 0.1,
+  y: 60,
+  yoyo: true,
+  repeat: -1,
+  ease: "power1.inOut",
+  delay: 1,
+});
+
+var element = document.getElementById("heart");
+
+TweenMax.to(element, 0.1, { x: "+=20", yoyo: true, repeat: -1 });
+TweenMax.to(element, 0.1, { x: "-=20", yoyo: true, repeat: -1 });
