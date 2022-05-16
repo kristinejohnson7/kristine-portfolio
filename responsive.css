@@ -318,6 +318,14 @@
     left: 0;
   }
 
+  .projects-filter {
+    gap: 13px;
+  }
+
+  .review-carousel .review-item {
+    box-shadow: initial;
+  }
+
   .scroll-arrows {
     display: none;
   }
