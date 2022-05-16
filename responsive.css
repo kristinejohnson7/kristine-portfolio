@@ -309,19 +309,17 @@
     width: 70%;
   }
 
+  .flower-wrapper {
+    margin-top: -63px;
+  }
+
   .flower-wrapper img:nth-child(5) {
     display: none;
     left: 0;
   }
 
   .scroll-arrows {
-    top: 39%;
-    left: 31%;
-    width: 50px;
-  }
-
-  .scroll-arrows:nth-of-type(2) {
-    left: 161px;
+    display: none;
   }
 
   form {
