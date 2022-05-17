@@ -24,6 +24,7 @@
 .nav-bar li {
   text-transform: uppercase;
   cursor: pointer;
+  padding: 5px;
 }
 
 .nav-bar .fa-circle {
@@ -33,10 +34,12 @@
 .nav-bar.sticky {
   background-color: var(--light-background);
   z-index: 1000;
+  right: unset;
+  padding-right: 100px;
   margin-top: 0;
   margin-right: 0;
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: end;
 }
 

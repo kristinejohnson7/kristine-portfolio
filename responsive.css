@@ -2,6 +2,22 @@
   .container { max-width: 1140px; }
 }
 
+@media (max-width: 1100px) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .logo-nav img {
+    width: 47%;
+    margin-top: 75px;
+  }
+
+  .flower-wrapper {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 950px) {
   .flower-wrapper img:nth-child(1) {
     height: 325px;
@@ -112,6 +128,39 @@
   .border-container .about-leaf {
     width: 138px;
     height: 172px;
+  }
+}
+
+@media (max-width: 740px) {
+  [aria-controls="navbarDropdown"] {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul li {
+    display: none;
+  }
+
+  /* #topNav li, i {
+    display: none;
+  } */
+
+  [aria-expanded="true"] ~ ul {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: var(--size-50);
+    border-radius: 20px;
+    margin: var(--size-16);
+    padding: var(--size-20);
+    z-index: 1000000;
+    text-align: right;
+    box-shadow: 0px 0px var(--size-20) rgba(52, 49, 75, 0.1);
+    background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.70));
+  }
+
+  [aria-expanded="true"] ~ ul li a {
+    margin-right: var(--size-20);
+    color: var(--font-color-dark);
   }
 }
 

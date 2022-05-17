@@ -5,7 +5,6 @@ const active = "active";
 const filterLink = document.querySelectorAll(dataFilter);
 const aboutItems = document.querySelectorAll(aboutData);
 
-const navButton = document.querySelector("button[aria-expanded");
 const nav = document.getElementById("topNav");
 
 var span = document.querySelectorAll(".scroll-arrows");
@@ -68,12 +67,14 @@ window.onscroll = function () {
   }
 };
 
-// function toggleNav({ target }) {
-//   const expanded = target.getAttribute("aria-expanded") === "true" || false;
-//   navButton.setAttribute("aria-expanded", !expanded);
-// }
+const navButton = document.querySelector("button[aria-expanded");
 
-// navButton.addEventListener("click", toggleNav);
+function toggleNav({ target }) {
+  const expanded = target.getAttribute("aria-expanded") === "true" || false;
+  navButton.setAttribute("aria-expanded", !expanded);
+}
+
+navButton.addEventListener("click", toggleNav);
 
 //Carousel
 
@@ -144,30 +145,6 @@ for (const link of filterLink) {
     });
   });
 }
-
-// Project Modal
-
-// var modal = document.getElementById("myModal");
-// var btn = document.querySelectorAll(".project-popup-btn");
-// console.log(btn);
-// var span = document.getElementsByClassName("close")[0];
-// btn.forEach((button) => {
-//   console.log(button);
-//   button.addEventListener("click", () => {
-//     onsole.log("I'm clicking on mybtn");
-//     modal.style.display = "block";
-//   });
-// });
-
-// span.onclick = function () {
-//   modal.style.display = "none";
-// };
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// };
 
 //Modal
 const open = "open";
@@ -349,7 +326,6 @@ submitButton.addEventListener("click", (e) => {
     { opacity: 0, y: 30 },
     { opacity: 1, y: 0 }
   );
-  //Hand wave
   gsap.set("#hand", { transformOrigin: "left" });
   gsap.fromTo(
     "#hand",
