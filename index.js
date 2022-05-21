@@ -1,3 +1,6 @@
+// import React from "react";
+// import { render } from "react-dom";
+
 const dataFilter = "[data-filter]";
 const aboutData = "[data-item]";
 const active = "active";
@@ -7,9 +10,9 @@ const aboutItems = document.querySelectorAll(aboutData);
 
 const nav = document.getElementById("topNav");
 
-var span = document.querySelectorAll(".scroll-arrows");
-var div = document.querySelectorAll(".projects-scroll");
-var l = 0;
+let span = document.querySelectorAll(".scroll-arrows");
+let div = document.querySelectorAll(".projects-scroll");
+let l = 0;
 
 //Hero Flower Animation
 
@@ -31,7 +34,7 @@ gsap.fromTo(
 );
 //Parallax
 
-var image = document.getElementsByClassName("para");
+let image = document.getElementsByClassName("para");
 new simpleParallax(image, {
   delay: 0.7,
   transition: "cubic-bezier(0,0,0,1)",
@@ -81,7 +84,7 @@ navButton.addEventListener("click", toggleNav);
 span[1].onclick = () => {
   console.log("Span being clicked");
   l++;
-  for (var i of div) {
+  for (let i of div) {
     if (l == 0) {
       i.style.left = "0px";
     }
@@ -104,7 +107,7 @@ span[1].onclick = () => {
 };
 span[0].onclick = () => {
   l--;
-  for (var i of div) {
+  for (let i of div) {
     if (l == 0) {
       i.style.left = "0px";
     }
@@ -343,7 +346,7 @@ gsap.to("#star", 1, {
   delay: 1,
 });
 
-var element = document.getElementById("heart");
+let element = document.getElementById("heart");
 
 TweenMax.to(element, 0.1, { x: "+=20", yoyo: true, repeat: -1 });
 TweenMax.to(element, 0.1, { x: "-=20", yoyo: true, repeat: -1 });
