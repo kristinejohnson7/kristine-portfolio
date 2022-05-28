@@ -136,13 +136,9 @@
     display: block;
   }
 
-  [aria-expanded="false"] ~ ul li {
+  [aria-expanded="false"] ~ ul {
     display: none;
   }
-
-  /* #topNav li, i {
-    display: none;
-  } */
 
   [aria-expanded="true"] ~ ul {
     display: block;
@@ -158,10 +154,11 @@
     background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.70));
   }
 
-  [aria-expanded="true"] ~ ul li a {
+  [aria-expanded="true"] ~ ul li {
     margin-right: var(--size-20);
     color: var(--font-color-dark);
   }
+
 }
 
 @media (max-width: 650px) {
