@@ -76,6 +76,10 @@
 
 /* Hero Header */
 
+.mobile-logo {
+  display: none;
+}
+
 .hero-wrapper {
   border-bottom: 5px solid var(--highlight-light-pink);
   margin-top: 310px;
