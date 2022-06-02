@@ -243,6 +243,10 @@
     top: -377px;
   }
 
+  .review-carousel .review-item {
+    box-shadow: initial;
+  }
+
   form {
     min-width: 440px;
   }
