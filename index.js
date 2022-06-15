@@ -63,14 +63,17 @@ new simpleParallax(image, {
 //Nav Events
 
 const navLogo = document.querySelector(".nav-logo");
+const wholeNav = document.querySelector(".nav-wrapper");
 
 window.onscroll = function () {
   if (window.pageYOffset > 100) {
     nav.classList.add("sticky");
     navLogo.classList.add("sticky");
+    wholeNav.classList.add("sticky");
   } else {
     nav.classList.remove("sticky");
     navLogo.classList.remove("sticky");
+    wholeNav.classList.remove("sticky");
   }
 };
 
