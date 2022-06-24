@@ -21,6 +21,7 @@
       src="https://kit.fontawesome.com/01dfe11cf5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdZoJUgAAAAAKHG-mT7DoyixxBqmiAw3Ye3UaM5"></script>
   </head>
   <body>
     <div class="navbar">
@@ -593,6 +594,7 @@
       method="POST"
       action="https://getform.io/f/6e810cc0-5823-499f-b1fd-7b27ccdf9600"
       target="_blank">
+      <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
         <div class="contact-left">
           <h2 class="contact-title">Contact Me</h2>
           <p class="description">Let's talk more. <br> For more information, <br> reach out.</p>
@@ -769,5 +771,13 @@
     ></script>
     <script src="index.js" async defer></script>
     <script src="carousel.js"></script>
+    <script>
+         grecaptcha.ready(function() {
+       grecaptcha.execute('6LdZoJUgAAAAAKHG-mT7DoyixxBqmiAw3Ye3UaM5', {action: 'contact'})
+       .then(function(token) {
+         document.getElementById('captchaResponse').value = token;
+       });
+     });
+    </script>
   </body>
 </html>
