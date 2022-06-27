@@ -89,6 +89,10 @@
   margin-top: 310px;
 }
 
+.hero-btn {
+  z-index: 1000000;
+}
+
 .hero-text {
   text-align: right;
   padding-right: 20px;

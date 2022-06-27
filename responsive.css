@@ -337,7 +337,7 @@
 @media (max-width: 475px) {
 
   .flower-wrapper {
-    margin-top: -55px;
+    margin-top: -21px;
   }
 
   .flower-wrapper img:nth-child(1) {
@@ -401,7 +401,7 @@
 
   form {
     padding: 2rem 2rem;
-    min-width: 395px;
+    min-width: 310px;
   }
 
   #character {
